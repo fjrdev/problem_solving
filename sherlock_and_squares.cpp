@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <math.h>
 
 using namespace std;
 
@@ -17,6 +18,13 @@ vector<string> split(const string &);
 
 int squares(int a, int b) {
 
+    const int32_t a_sqr = sqrt(a);
+    const int32_t b_sqr = sqrt(b);
+    int32_t betw_ctr = b_sqr - a_sqr;
+    
+    if (pow(a_sqr, 2) >= a) betw_ctr++;
+    
+    return betw_ctr;
 }
 
 int main()
@@ -86,4 +94,5 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
+
 
